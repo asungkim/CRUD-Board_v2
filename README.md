@@ -5,7 +5,18 @@
 1. node.js 및 npm 설치
 2. 프로젝트 상위 디렉토리로 이동하여 sever 폴더 생성
 3. sever 기본 설정
-   - npm init -y && npm install express cors mongoose body-parser
+   - npm init -y && npm install express cors mongoose body-parser nodemon
+   ```bash
+   npm init -y
+   npm install express cors mongoose body-parser nodemon
+   ```
+   - dev 스크립트 추가
+     - package.json script 부분에 start, dev 부분 작성
+     ```javascript
+        "scripts": {
+     "start": "node index.js",   // 일반 서버 실행
+     "dev": "nodemon index.js"   // 개발 모드에서 nodemon으로 서버 실행
+     ```
    - index.js 를 통해 express 서버 생성
    - .env 를 통해 환경변수 받기
    - MongoDB 모델 생성
