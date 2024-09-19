@@ -27,3 +27,16 @@
    - src 에 컴포넌트 생성하기
 
 ## 2. 설계
+
+- server  
+  ├── models // DB 스키마  
+  ├── middleware // 인증 및 인가  
+  ├── routes // 라우터
+
+- client  
+   ├── src/  
+  │ ├── components // 페이지 요소 관리 폴더  
+  │ ├── App.js // 최상위 컴포넌트  
+  │ └── App.css // App.js 의 스타일 시트 역할
+
+## 3.
