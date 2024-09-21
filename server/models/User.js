@@ -9,7 +9,7 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  roel: {
+  role: {
     type: String,
     enum: ["user", "admin"],
     defaul: "user",
