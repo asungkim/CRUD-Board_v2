@@ -8,6 +8,9 @@ const app = express();
 app.use(cors());
 app.use(body_parser.json());
 
+const authRouter = require("./routes/auth");
+app.use("/api/auth", authRouter);
+
 mongoose
   .connect(process.env.mongoose_URI)
   .then(() => console.log("MongoDB connected"))
