@@ -3,9 +3,7 @@ const router = express.Router();
 const Post = require("../models/Post");
 
 // 글 작성
-router.post("/", async (req, res) => {
-  const { title, content } = req.body;
-});
+router.post("/", async (req, res) => {});
 
 // 모든 글 조회
 router.get("/", async (req, res) => {});
