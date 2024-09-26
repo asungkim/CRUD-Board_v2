@@ -57,9 +57,6 @@ router.patch("/:postId", auth, async (req, res) => {
     if (!post) return res.json({ message: "Post not found" });
 
     const { title, content } = req.body;
-
-    console.log(post.userId.username);
-    console.log(req.user);
     // 작성자만 수정 가능
     if (post.userId.username === req.user.username) {
       post.title = title;
