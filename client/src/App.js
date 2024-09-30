@@ -21,11 +21,15 @@ function App() {
     }
   }, []);
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setUser(null);
+    window.location.href = "/";
+  };
+
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Header />} />
-      </Routes>
+      <Header />
       <Main />
       <Footer />
     </Router>

@@ -1,10 +1,17 @@
 import React from "react";
+import { Link, Navigate, Route, Routes } from "react-router-dom";
+import Login from "./contents/Login";
+import Posts from "./contents/Posts";
 
-const Content = () => {
+const Content = ({ user, setUser }) => {
   return (
-    <section>
-      <p>This is a collection of Post</p>
-    </section>
+    <Routes>
+      <Route
+        path="/"
+        element={user ? <Navigate to="/posts" /> : <Login setUser={setUser} />}
+      />
+      <Route path="/posts" element={user ? <Posts /> : <Navigate to="/" />} />
+    </Routes>
   );
 };
 
